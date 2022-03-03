@@ -1,5 +1,5 @@
 const Person = require('../../src/shouty')
-const { defineParameterType } = require('cucumber')
+const { defineParameterType } = require('@cucumber/cucumber')
 
 defineParameterType({
   name: 'person',
