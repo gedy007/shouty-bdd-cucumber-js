@@ -1,9 +1,10 @@
+@SHOUTY-11
 Feature: Hear shout
 
   Shouty allows users to "hear" other users "shouts" as long as they are close enough to each other.
 
   Rule: Shouts can be heard by other users
-
+    @slow
     Scenario: Listener hears a message
       Given a person named Sean
       And a person named Lucy
@@ -11,7 +12,7 @@ Feature: Hear shout
       Then Lucy should hear Sean's message
 
   Rule: Shouts should only be heard if listener is within range
-
+    @slow
     Scenario: Listener is within range
       Given the range is 100
       And people are located at
@@ -20,6 +21,7 @@ Feature: Hear shout
       When Sean shouts
       Then Lucy should hear a shout
 
+    @focus
     Scenario: Listener is out of range
       Given the range is 100
       And people are located at
